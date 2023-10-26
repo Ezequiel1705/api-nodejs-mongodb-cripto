@@ -1,0 +1,8 @@
+# Expo
+.expo/
+
+# Dependecies
+node_modules/
+
+# local
+.env

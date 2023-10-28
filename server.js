@@ -11,6 +11,7 @@ const corsOptions = {
     credentials: true
 };
 
+
 const app = express();
 
 app.use(express.json());
@@ -20,7 +21,7 @@ app.use("/api", router);
 
 const PORT = process.env.PORT_SERVER || 8080;
 
-const server = app.listen(PORT,() => {
+const server = app.listen(PORT, "0.0.0.0" , () => {
     console.log(`Server running on port ${PORT}`)
 });
 server.on("Error", err => console.log(err));

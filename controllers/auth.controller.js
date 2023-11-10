@@ -6,7 +6,7 @@ import { generateToken } from '../middlewares/auth.middleware.js';
 export const signUp = async (req, res) => {
     try {
         const { name, email, password } = req.body;
-        console.log(req.body);
+        //console.log(req.body);
 
         if (!(await User.findOne({email: email}))) {
             const passwordHash = await bcrypt.hash(password, 10)
